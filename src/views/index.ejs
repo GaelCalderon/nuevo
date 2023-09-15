@@ -8,7 +8,33 @@
 </head>
 <body>
     <div class="container">
-        <div class="col-md-5">
+        <!-- comienza formulario -->
+        <div class="container">
+                <div class="col-4">
+                    <div class="card-body">
+                        <form action="/add" method="POSt">
+                            <label for="marca" class="form-label">Marca</label>
+                            <div class="form-grup">
+                                <input type="text" id="marca" name="marca"  placeholder="Marca" class="form-control">
+                            </div>
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <div class="form-grup">
+                                <input type="text" id="nombre" name="nombre"  placeholder="Nombre" class="form-control">
+                            </div>
+                            <label for="precio" class="form-label">Precio</label>
+                            <div class="form-grup">
+                                <input type="number" id="precio" name="precio"   class="form-control">
+                            </div>
+                            <button  class="btn btn-primary">Registrar</button>
+                        </form>
+                    </div>
+                </div>            
+        </div>
+
+
+
+        <!-- fin de formulario -->
+        <div class="col-5">
             <table class="table table-bordered table-hover">
                 <thead>
                     <tr>
@@ -23,11 +49,13 @@
                     <% for (var i = 0; i < datos.length; i++) { %>
                         <tr>
                             <td><%= i + 1 %></td>
-                            <td><%= datos[i].Marca %></td>
-                            <td><%= datos[i].Nombre %></td>
-                            <td><%= datos[i].Precio %></td>
+                            <td><%= datos[i].marca %></td>
+                            <td><%= datos[i].nombre %></td>
+                            <td><%= datos[i].precio %></td>
                             <td>
-                                
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                                    Eliminar
+                               </button>
                             </td>
                                 
                             </td>
@@ -37,5 +65,6 @@
             </table>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
