@@ -8,7 +8,28 @@
 </head>
 <body>
     <div class="container">
-        
+        <div class="col-md-5">
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Marca</th>
+                        <th>Nombre</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (var i = 0; i < datos.length; i++) { %>
+                        <tr>
+                            <td><%= i + 1 %></td>
+                            <td><%= datos[i].Marca %></td>
+                            <td><%= datos[i].Nombre %></td>
+                            <td><%= datos[i].Precio %></td>
+                        </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
