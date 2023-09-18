@@ -23,5 +23,29 @@ router.get('/del/:id', async(req, res) =>{
     await Producto.findByIdAndRemove;
     res.redirect('/');
 });
+router.get('/eliminar/:id', async (req, res) => {
+    try {
+        const id = req.params.id;
+        await Producto.findByIdAndDelete(id);
+        res.redirect('/');
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error en el servidor');
+    }
+});
+
+// Ruta para mostrar la página principal
+router.get('/', async (req, res) => {
+    try {
+        const datos = await Producto.find();
+        res.render('index.ejs', {
+            datos
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send('Error en el servidor');
+    }
+});
+
 
 module.exports = router;
