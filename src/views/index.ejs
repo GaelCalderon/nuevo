@@ -8,8 +8,22 @@
 </head>
 <body>
     <div class="container-fluid">
+        <!-- Banner de presentación -->
         <div class="row">
-            <div class="col">
+            <div class="col text-center mt-5">
+                <h1>Bienvenido a Tienda</h1>
+            </div>
+        </div>
+
+        <!-- Pregunta y botón para registrar -->
+        <div class="row">
+            <div class="col text-center mt-3">
+                <p>¿Deseas registrar un producto?</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrarModal">
+                    Registrar
+                </button>
+            </div>
+        </div>
                 <table class="table table-bordered table-hover">
                     <thead>
                         <tr>
@@ -93,13 +107,7 @@
                 </table>
             </div>
         </div>
-        <div class="row">
-            <div class="col text-center">
-                <!-- Botón de registrar al final de la página -->
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registrarModal">
-                    Registrar
-                </button>
-            </div>
+        
             <!-- Modal para el formulario de registro -->
 <div class="modal fade" id="registrarModal" tabindex="-1" aria-labelledby="registrarModalLabel" aria-hidden="true">
     <div class="modal-dialog">
